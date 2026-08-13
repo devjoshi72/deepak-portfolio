@@ -12,7 +12,7 @@ export const personalDetails = {
 export const systemMetrics = [
   { label: "Production Clusters", value: "15+", suffix: "K8s Clusters", color: "from-cyan-500 to-blue-500" },
   { label: "Data Migrated", value: "50+", suffix: "Terabytes", color: "from-emerald-500 to-teal-500" },
-  { label: "Daily Deployments", value: "10+", suffix: "Zero Downtime", color: "from-purple-500 to-indigo-500" },
+  { label: "Daily Deployments", value: "10+", suffix: "Minimum Downtime", color: "from-purple-500 to-indigo-500" },
   { label: "Platform Uptime", value: "99.99%", suffix: "SLO Achieved", color: "from-amber-500 to-orange-500" },
 ];
 
@@ -53,7 +53,7 @@ export const technicalSkills = [
     skills: ["Kafka", "Druid", "Aerospike", "Redis", "Varnish", "PostgreSQL", "MongoDB", "RabbitMQ"],
   },
   {
-    category: "Platforms & OS",
+    category: "Platforms & Applications",
     icon: "Server",
     skills: ["Magento 1 & 2", "WordPress", "Drupal", "Enterprise Linux", "Windows Server"],
   },
@@ -68,7 +68,7 @@ export const experiences = [
     type: "Full-time",
     highlights: [
       "Orchestrated multi-region cloud-native infrastructure across 15+ production clusters, maintaining high availability through proactive scaling and automated self-healing configurations.",
-      "Architected Blue-Green deployment pipelines supporting 10+ daily production releases, eliminating deployment-related downtime.",
+      "Architected Blue-Green deployment pipelines supporting 10+ daily production releases, maintaining minimum downtime.",
       "Automated enterprise infrastructure provisioning using Terraform, including resource lifecycle management and spot-instance scheduling for non-critical workloads.",
       "Strengthened platform security by implementing HashiCorp Vault for dynamic secrets management and Kubernetes RBAC for least-privilege access control.",
     ],
@@ -146,11 +146,11 @@ export const keyProjects = [
     title: "Multi-Cloud Infrastructure & Migration",
     category: "Cloud Migration",
     subtitle: "GCP to AWS 50+ TB Data & Infrastructure Migration",
-    description: "Executed a complete seamless multi-cloud migration from GCP to AWS using Terraform for IaC, establishing secure cross-cloud VPC peering, automated EKS deployments, and zero data loss transfer of 50+ TB high-throughput digital analytics data.",
+    description: "Designed and managed cloud infrastructure across AWS, GCP, and Azure. Executed large-scale cloud migration using Terraform for IaC, establishing secure cross-cloud VPC peering, automated EKS deployments, and zero data loss transfer of 50+ TB digital analytics data.",
     tools: ["AWS EKS", "GCP GKE", "Terraform", "VPC Networking", "Kubernetes"],
     stats: [
       { label: "Data Moved", value: "50+ TB" },
-      { label: "Downtime", value: "0 mins" },
+      { label: "Downtime", value: "Minimum" },
       { label: "Cost Saved", value: "28%" },
     ],
     gradient: "from-blue-600/20 via-cyan-500/10 to-transparent",
@@ -161,7 +161,7 @@ export const keyProjects = [
     title: "Distributed Data Platform & Disaster Recovery",
     category: "Distributed Systems",
     subtitle: "Kafka, Druid & Aerospike Multi-DC Pipeline",
-    description: "Designed and operated distributed event streaming & analytical storage clusters across 3 geographically separate data centers. Built automated replication and failover pipelines ensuring high data persistence for real-time digital media workloads.",
+    description: "Managed distributed data infrastructure supporting high-volume workloads across 3 data centers. Built automated replication and failover pipelines ensuring high data persistence and operational resilience for real-time digital media workloads.",
     tools: ["Kafka", "Druid", "Aerospike", "Disaster Recovery", "Alertmanager"],
     stats: [
       { label: "Data Centers", value: "3 Regional" },
@@ -176,7 +176,7 @@ export const keyProjects = [
     title: "E-Commerce High-Traffic Platform Optimization",
     category: "Performance SRE",
     subtitle: "Magento 2 Caching & High-Availability Stack",
-    description: "Optimized enterprise Magento production workloads serving 50,000+ active global users using multi-tier caching (Redis & Varnish), NGINX reverse proxies, and Kubernetes horizontal pod autoscaling.",
+    description: "Optimized Magento production environments using application and infrastructure-level caching (Redis & Varnish), NGINX reverse proxies, and Kubernetes horizontal pod autoscaling for platforms serving 50,000+ global users.",
     tools: ["Magento 2", "Redis", "Varnish", "NGINX", "KEDA / K8s"],
     stats: [
       { label: "Global Users", value: "50,000+" },
@@ -191,7 +191,7 @@ export const keyProjects = [
     title: "Centralized Microservices Telemetry Engine",
     category: "Observability & SRE",
     subtitle: "Prometheus, Grafana & ELK Stack for 40+ Microservices",
-    description: "Architected centralized logging, metric collection, and alerting infrastructure across 40+ microservices. Reduced Mean Time To Detect (MTTD) and Mean Time To Resolve (MTTR) by establishing proactive threshold triggers.",
+    description: "Built centralized monitoring, logging, dashboards, and alerting for 40+ microservices using Prometheus, Grafana, ELK Stack, Loki, and Alertmanager. Improved operational visibility and supported faster incident investigation.",
     tools: ["Prometheus", "Grafana", "ELK Stack", "Loki", "CloudWatch"],
     stats: [
       { label: "Microservices", value: "40+" },
@@ -210,7 +210,7 @@ export const certifications = [
     status: "Achieved",
     badge: "🏆 Award",
     year: "2025",
-    description: "Recognized for outstanding technical contribution, reliability excellence, and zero-downtime Blue-Green pipeline implementation.",
+    description: "Recognized for outstanding technical contribution, reliability excellence, and minimum downtime Blue-Green pipeline implementation.",
   },
   {
     title: "Oracle Cloud Infrastructure - Accredited DevOps Professional",

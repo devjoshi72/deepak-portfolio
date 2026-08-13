@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import PipelineVisualizer from "./components/PipelineVisualizer";
@@ -8,17 +8,41 @@ import SkillsMatrix from "./components/SkillsMatrix";
 import Certifications from "./components/Certifications";
 import ResumeViewer from "./components/ResumeViewer";
 import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
-import InteractiveTerminal from "./components/InteractiveTerminal";
 
 export default function App() {
-  const [terminalOpen, setTerminalOpen] = useState(false);
+  useEffect(() => {
+    const pathToIdMap = {
+      "/profile": "hero",
+      "/architecture": "architecture",
+      "/experience": "experience",
+      "/projects": "projects",
+      "/skills": "skills",
+      "/connect": "connect",
+      "/lets-connect": "connect",
+    };
+
+    const handleRouteScroll = () => {
+      const currentPath = window.location.pathname.toLowerCase();
+      const targetId = pathToIdMap[currentPath];
+      if (targetId) {
+        setTimeout(() => {
+          const elem = document.getElementById(targetId);
+          if (elem) elem.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    };
+
+    handleRouteScroll();
+
+    window.addEventListener("popstate", handleRouteScroll);
+    return () => window.removeEventListener("popstate", handleRouteScroll);
+  }, []);
 
   return (
-    <div className="min-h-screen bg-[#070a12] text-gray-100 selection:bg-cyan-500 selection:text-slate-950">
-      <Navbar onOpenTerminal={() => setTerminalOpen(true)} />
+    <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-cyan-500 selection:text-white overflow-x-hidden">
+      <Navbar />
       <main>
-        <Hero onOpenTerminal={() => setTerminalOpen(true)} />
+        <Hero />
         <PipelineVisualizer />
         <Experience />
         <Projects />
@@ -27,11 +51,6 @@ export default function App() {
         <ResumeViewer />
         <ContactSection />
       </main>
-      <Footer onOpenTerminal={() => setTerminalOpen(true)} />
-      <InteractiveTerminal
-        isOpen={terminalOpen}
-        onClose={() => setTerminalOpen(false)}
-      />
     </div>
   );
 }

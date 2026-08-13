@@ -34,32 +34,32 @@ export default function SkillsMatrix() {
     : technicalSkills.filter((s) => s.category === selectedCategory);
 
   return (
-    <section id="skills" className="py-20 relative bg-grid-pattern bg-[#070a12] border-t border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-12 sm:py-16 lg:py-20 relative bg-white border-t border-slate-200">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-14 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-100 border border-cyan-200 text-cyan-800 text-xs font-mono font-semibold">
             <Cpu className="w-3.5 h-3.5" />
             <span>TECHNICAL CAPABILITIES MATRIX</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
             DevOps & SRE Skill Matrix
           </h2>
-          <p className="text-gray-400 text-sm sm:text-base">
+          <p className="text-slate-600 text-sm sm:text-base font-normal">
             Core toolsets, infrastructure protocols, and automation frameworks mastered across 5+ years in production SRE environments.
           </p>
         </div>
 
         {/* Category Selector Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12 font-mono text-xs">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-8 sm:mb-12 font-mono text-[10px] sm:text-xs">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-lg border transition-all ${
+              className={`px-4 py-2 rounded-xl border transition-all cursor-pointer font-medium ${
                 selectedCategory === cat
-                  ? "bg-cyan-500 text-slate-950 font-bold border-cyan-400 shadow-md shadow-cyan-500/20"
-                  : "bg-slate-900 text-gray-300 border-slate-800 hover:border-cyan-500/40"
+                  ? "bg-cyan-600 text-white font-bold border-cyan-600 shadow-md shadow-cyan-600/20"
+                  : "bg-slate-100 text-slate-700 border-slate-200 hover:border-cyan-400 hover:bg-cyan-50"
               }`}
             >
               {cat}
@@ -68,33 +68,33 @@ export default function SkillsMatrix() {
         </div>
 
         {/* Skills Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {filteredSkills.map((group) => {
             const IconComponent = iconMap[group.icon] || Server;
             return (
               <div
                 key={group.category}
-                className="glass-card glass-card-hover rounded-xl p-6 border border-slate-800 hover:border-cyan-500/40 flex flex-col justify-between"
+                className="glass-card rounded-2xl p-6 border border-slate-200 bg-white hover:border-cyan-400 hover:shadow-lg transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center gap-3 mb-4 border-b border-slate-800 pb-3">
-                    <div className="p-2.5 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
+                  <div className="flex items-center gap-3 mb-4 border-b border-slate-100 pb-3">
+                    <div className="p-2.5 rounded-xl bg-cyan-50 border border-cyan-200 text-cyan-700">
                       <IconComponent className="w-5 h-5" />
                     </div>
-                    <h3 className="font-bold text-white text-base">{group.category}</h3>
+                    <h3 className="font-bold text-slate-900 text-base">{group.category}</h3>
                   </div>
 
-                  <ul className="space-y-2 font-mono text-xs text-gray-300">
+                  <ul className="space-y-2 font-mono text-xs text-slate-700">
                     {group.skills.map((skill) => (
-                      <li key={skill} className="flex items-center gap-2 bg-slate-950/50 px-2.5 py-1.5 rounded border border-slate-800/80">
-                        <Check className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                      <li key={skill} className="flex items-center gap-2 bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-200 font-medium">
+                        <Check className="w-3.5 h-3.5 text-cyan-600 shrink-0" />
                         <span>{skill}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-800/60 text-[10px] font-mono text-gray-500 text-right">
+                <div className="mt-4 pt-3 border-t border-slate-100 text-[10px] font-mono text-slate-400 text-right font-semibold">
                   PROD VERIFIED
                 </div>
               </div>

@@ -77,7 +77,7 @@ production   prometheus-k8s-0                1/1     Running   0          120d`,
 + module.eks_cluster.node_group ("15 Clusters Auto-healing")
 + module.vault.dynamic_secrets ("RBAC Enforced")
 
-Plan: 3 to add, 0 to change, 0 to destroy. Zero downtime guaranteed!`,
+Plan: 3 to add, 0 to change, 0 to destroy. Minimum downtime guaranteed!`,
       });
     } else if (cmd === "contact") {
       newHistory.push({
@@ -92,7 +92,7 @@ Plan: 3 to add, 0 to change, 0 to destroy. Zero downtime guaranteed!`,
         type: "output",
         content: `🏆 AWARD: Employee of the Year 2025
   Issuer: Ebizon Net Info Pvt. Ltd.
-  Citation: Recognized for zero-downtime Blue-Green pipelines, 15+ cluster reliability, and engineering excellence.`,
+  Citation: Recognized for minimum downtime Blue-Green pipelines, 15+ cluster reliability, and engineering excellence.`,
       });
     } else if (cmd === "download-resume") {
       const link = document.createElement("a");
