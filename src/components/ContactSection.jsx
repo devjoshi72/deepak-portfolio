@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle2, ShieldCheck, Clock } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle2, ShieldCheck, Clock } from "lucide-react";
 import { LinkedinIcon } from "./Icons";
 import { personalDetails } from "../data/portfolioData";
 
@@ -48,28 +48,14 @@ export default function ContactSection() {
                 {/* Email */}
                 <a
                   href={`mailto:${personalDetails.email}`}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-slate-900/80 border border-slate-800 hover:border-cyan-500/40 transition-colors group"
+                  className="flex items-center gap-3 p-4 rounded-lg bg-slate-900/80 border border-slate-800 hover:border-cyan-500/40 transition-colors group"
                 >
-                  <div className="p-2.5 rounded bg-cyan-500/10 text-cyan-400 group-hover:scale-110 transition-transform">
-                    <Mail className="w-4 h-4" />
+                  <div className="p-3 rounded bg-cyan-500/10 text-cyan-400 group-hover:scale-110 transition-transform">
+                    <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <div className="text-gray-400 text-[10px]">EMAIL ADDRESS</div>
-                    <div className="text-white font-bold group-hover:text-cyan-300">{personalDetails.email}</div>
-                  </div>
-                </a>
-
-                {/* Phone */}
-                <a
-                  href={`tel:${personalDetails.phone}`}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-slate-900/80 border border-slate-800 hover:border-cyan-500/40 transition-colors group"
-                >
-                  <div className="p-2.5 rounded bg-emerald-500/10 text-emerald-400 group-hover:scale-110 transition-transform">
-                    <Phone className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-gray-400 text-[10px]">PHONE / WHATSAPP</div>
-                    <div className="text-white font-bold group-hover:text-emerald-300">{personalDetails.phone}</div>
+                    <div className="text-white font-bold group-hover:text-cyan-300 text-sm">{personalDetails.email}</div>
                   </div>
                 </a>
 
@@ -78,25 +64,25 @@ export default function ContactSection() {
                   href={personalDetails.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-slate-900/80 border border-slate-800 hover:border-cyan-500/40 transition-colors group"
+                  className="flex items-center gap-3 p-4 rounded-lg bg-slate-900/80 border border-slate-800 hover:border-cyan-500/40 transition-colors group"
                 >
-                  <div className="p-2.5 rounded bg-blue-500/10 text-blue-400 group-hover:scale-110 transition-transform">
-                    <LinkedinIcon className="w-4 h-4" />
+                  <div className="p-3 rounded bg-blue-500/10 text-blue-400 group-hover:scale-110 transition-transform">
+                    <LinkedinIcon className="w-5 h-5" />
                   </div>
                   <div>
                     <div className="text-gray-400 text-[10px]">LINKEDIN PROFILE</div>
-                    <div className="text-white font-bold group-hover:text-blue-300">linkedin.com/in/deepakchandra72</div>
+                    <div className="text-white font-bold group-hover:text-blue-300 text-sm">linkedin.com/in/deepakchandra72</div>
                   </div>
                 </a>
 
-                {/* Location */}
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-slate-900/80 border border-slate-800">
-                  <div className="p-2.5 rounded bg-purple-500/10 text-purple-400">
-                    <MapPin className="w-4 h-4" />
+                {/* Location / Address */}
+                <div className="flex items-center gap-3 p-4 rounded-lg bg-slate-900/80 border border-slate-800">
+                  <div className="p-3 rounded bg-purple-500/10 text-purple-400">
+                    <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-gray-400 text-[10px]">CURRENT LOCATION</div>
-                    <div className="text-white font-bold">{personalDetails.location}</div>
+                    <div className="text-gray-400 text-[10px]">LOCATION / ADDRESS</div>
+                    <div className="text-white font-bold text-sm">{personalDetails.location}</div>
                   </div>
                 </div>
               </div>

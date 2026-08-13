@@ -83,10 +83,9 @@ Plan: 3 to add, 0 to change, 0 to destroy. Zero downtime guaranteed!`,
       newHistory.push({
         type: "output",
         content: `CONTACT INFORMATION:
-  Phone: ${personalDetails.phone}
   Email: ${personalDetails.email}
   LinkedIn: ${personalDetails.linkedin}
-  Location: ${personalDetails.location}`,
+  Location / Address: ${personalDetails.location}`,
       });
     } else if (cmd === "award") {
       newHistory.push({

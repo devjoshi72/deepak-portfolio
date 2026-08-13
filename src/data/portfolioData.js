@@ -2,7 +2,6 @@ export const personalDetails = {
   name: "Deepak Chandra",
   title: "Senior DevOps Engineer | Platform Engineer | Cloud & SRE",
   location: "Dehradun, Uttarakhand, India",
-  phone: "+91 7252815053",
   email: "deepakjoshiuk.in@gmail.com",
   linkedin: "https://linkedin.com/in/deepakchandra72",
   github: "https://github.com/deepakchandra72",
